@@ -1,0 +1,29 @@
+# Django project directories
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.swp
+
+# Django development server
+*.log
+
+# Environment variables
+env
+
+# Static files
+/static/
+
+# Media files
+/media/
+
+# Database
+/db.sqlite3
+
+# Secret key
+/secret_key.txt
+
+# Development settings file
+/local_settings.py
+
+project
