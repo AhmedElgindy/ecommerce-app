@@ -10,6 +10,51 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
 	<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+  <script>
+    var user = '{{request.user}}'
+   </script>
+   <script>
+    function getToken(name) {
+      let cookieValue = null;
+      if (document.cookie && document.cookie !== '') {
+          const cookies = document.cookie.split(';');
+          for (let i = 0; i < cookies.length; i++) {
+              const cookie = cookies[i].trim();
+              // Does this cookie string begin with the name we want?
+              if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                  cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                  break;
+              }
+          }
+      }
+      return cookieValue;
+  }
+  const csrftoken = getToken('csrftoken');
+   </script>
+   <script>
+    function getCookieValue(cookieName) {
+      var cookieArr = document.cookie.split(";");
+      for (var i = 0; i < cookieArr.length; i++) {
+        var cookiePair = cookieArr[i].split("=");
+  
+        if (cookieName == cookiePair[0].trim()) {
+          return decodeURIComponent(cookiePair[1]);
+        }
+      }
+      return null;
+    }
+  
+    var cart = JSON.parse(getCookieValue("cart"));
+  
+    if (cart === null) {
+      cart = {};
+      console.log("cart created");
+      document.cookie = "cart=" + JSON.stringify(cart) + ";domain=;path=/";
+    }
+  
+    console.log("cart =", cart);
+  </script>
+  
 
 </head>
 <body>
@@ -33,7 +78,7 @@
      	<a href="{% url 'cart' %}">
     		<img  id="cart-icon" src="{% static 'images/cart.jpg' %}">
     	</a>
-    	<p id="cart-total">0</p>
+    	<p id="cart-total">{{cartItem}}</p>
 
     </div>
   </div>
@@ -41,9 +86,13 @@
     {%block content%}
 
     {%endblock content%}
+    <script src='{% static 'js/cart.js'%}'></script>
+
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 
 
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+  
 </body>
 </html>
