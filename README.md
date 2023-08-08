@@ -52,7 +52,7 @@ Contributions are welcome! Feel free to fork the repository and submit pull requ
 
 You can reach me at:
 - Email: ahmedalaa1316@gmail.com
-- LinkedIn: [Your LinkedIn Profile](https://www.linkedin.com/in/ahmed-elgindy-a855161b3/)
+- LinkedIn: [MY LinkedIn Profile](https://www.linkedin.com/in/ahmed-elgindy-a855161b3/)
 
 ## License
 
