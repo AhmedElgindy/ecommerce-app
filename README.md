@@ -29,7 +29,7 @@ This web application allows users to browse and purchase products, manage their 
 
 ## Setup
 
-1. Clone the repository: `git clone https://github.com/yourusername/ecommerce-app.git`
+1. Clone the repository: `git clone https://github.com/AhmedElgindy/ecommerce-app.git`
 2. Navigate to the project directory: `cd ecommerce-app`
 3. Install dependencies: `pip install -r requirements.txt`
 4. Set up the database: `python manage.py migrate`
@@ -52,7 +52,7 @@ Contributions are welcome! Feel free to fork the repository and submit pull requ
 
 You can reach me at:
 - Email: ahmedalaa1316@gmail.com
-- LinkedIn: [MY LinkedIn Profile](https://www.linkedin.com/in/ahmed-elgindy-a855161b3/)
+- LinkedIn: [Ahmed Elgindy](https://www.linkedin.com/in/ahmed-elgindy-a855161b3/)
 
 ## License
 
