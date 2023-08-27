@@ -26,6 +26,7 @@ This web application allows users to browse and purchase products, manage their 
 - JavaScript
 - SQLite (for development)
 - Cookie-based guest user tracking
+ ![Database Schema](https://github.com/AhmedElgindy/ecommerce-app/blob/main/DatabaseShcema.png)
 
 ## Setup
 
